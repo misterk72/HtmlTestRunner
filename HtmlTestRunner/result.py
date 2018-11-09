@@ -51,11 +51,11 @@ def strip_module_names(testcase_names):
     """Examine all given test case names and strip them the minimal
     names needed to distinguish each. This prevents cases where test
     cases housed in different files but with the same names cause clashes."""
-    result = testcase_names.copy()
+    result = list(testcase_names)
     for i, testcase in enumerate(testcase_names):
         classname = testcase.split(".")[-1]
         duplicate_found = False
-        testcase_names_ = testcase_names.copy()
+        testcase_names_ = list(testcase_names)
         del testcase_names_[i]
         for testcase_ in testcase_names_:
             classname_ = testcase_.split(".")[-1]
