@@ -155,7 +155,7 @@ class HtmlTestResult(TextTestResult):
 
             if self.showAll:
                 self.stream.writeln(
-                    "{} ({:3f})s".format(verbose_str, test_info.elapsed_time))
+                    "{} ({:3f}s)".format(verbose_str, test_info.elapsed_time))
             elif self.dots:
                 self.stream.write(short_str)
 
