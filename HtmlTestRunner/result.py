@@ -382,7 +382,7 @@ class HtmlTestResult(TextTestResult):
             if testRunner.report_name is not None:
                 report_name_body = testRunner.report_name
             else:
-                report_name_body = self.default_prefix + "_".join(strip_module_names(list(all_results.keys())))[0:128]
+                report_name_body = self.default_prefix + "_".join(strip_module_names(list(all_results.keys())))[:128]
             self.generate_file(testRunner, report_name_body, html_file)
 
     def generate_file(self, testRunner, report_name, report):
